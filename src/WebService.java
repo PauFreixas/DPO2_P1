@@ -53,6 +53,8 @@ public class WebService {
         String url = "https://maps.googleapis.com/maps/api/place/textsearch/json?";
         url = url + "query="+ubicacion+"&language=es"+"&key="+ SITESKEY;
 
+        System.out.println(url);
+
         String msg = getInfoFromUrl(url);
 
         return msg;
@@ -64,6 +66,7 @@ public class WebService {
         } catch (IOException e){
             e.printStackTrace();
         }
+
         String link = "http://maps.google.com/?q=" + s;
 
         try {
