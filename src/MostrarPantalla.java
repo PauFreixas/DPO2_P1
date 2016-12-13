@@ -32,13 +32,12 @@ public class MostrarPantalla {
     }
 
     public void ubicacion (){
-        System.out.println("Introdueix una ubicació:" + INTRO);
+        System.out.println("Introdueix una ubicació:");
     }
 
     public void carregant (){
         System.out.println("Carregant Google Maps..." + INTRO);
     }
-
 
     public void listarBicing (EstacionBicing estacio){
         System.out.println("L'estacio de bicing mes propera es troba a: " + INTRO + estacio.getCalle()+ " amb un total de " + estacio.getBikes() + " de " + (estacio.getSlots()+estacio.getBikes()) + " bicicletes disponibles." + INTRO);
@@ -48,6 +47,26 @@ public class MostrarPantalla {
             System.out.println((i+1) +". "+estacio.getEstaciones().get(i).getCalle());
             System.out.println(" Amb un total de "+estacio.getEstaciones().get(i).getBikes()+" de "+(estacio.getEstaciones().get(i).getSlots()+estacio.getEstaciones().get(i).getBikes())+" bicicletes disponibles.");
         }
+        System.out.println(INTRO);
+    }
+
+    public void salida (){
+        System.out.println("Introdueix la sortida: ");
+    }
+
+    public void llegada (){
+        System.out.println("Introdueix la arribada: ");
+    }
+
+    public void infoRuta (Ruta ruta) {
+        System.out.println("------------ Generant Ruta ----------");
+        System.out.println("-- Origen: " + ruta.getSsalida());
+        System.out.println("-- Destí: " + ruta.getSllegada());
+        System.out.println("-- Distància: " + ruta.getDistacia() + " m");
+        System.out.println("-- Duració: " + ruta.getTiempo()/60 +":"+ ruta.getTiempo()%60);
+
+        System.out.println(INTRO + "Estació origen més propera: " + ruta.getEbsalida().getCalle());
+        System.out.println("Estació destí més propera: " + ruta.getEbllegada().getCalle());
         System.out.println(INTRO);
     }
 

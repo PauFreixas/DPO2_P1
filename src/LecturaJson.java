@@ -37,6 +37,37 @@ public class LecturaJson {
 
     }
 
+    public Ruta infoToRuta (String info, Ruta ruta){
+        int tiempo = 0;
+        int distancia = 0;
+
+        JsonParser parser = new JsonParser();
+        JsonObject obj = (JsonObject) parser.parse(info);
+        JsonArray inici = obj.get("origin_addresses").getAsJsonArray();
+        ruta.setSsalida(inici.get(0).getAsString());
+        JsonArray llegada = obj.get("destination_addresses").getAsJsonArray();
+        ruta.setSllegada(llegada.get(llegada.size()-1).getAsString());
+
+        JsonArray casillas = (JsonArray) obj.get("rows");
+
+        for (int i = 0; i < casillas.size(); i++){
+            JsonObject elements = casillas.get(i).getAsJsonObject();
+            JsonArray asdf = elements.get("elements").getAsJsonArray();
+            JsonObject joinfo = asdf.get(i).getAsJsonObject();
+
+            JsonObject distance = joinfo.get("distance").getAsJsonObject();
+            distancia = distancia + distance.get("value").getAsInt();
+
+            JsonObject duration = joinfo.get("duration").getAsJsonObject();
+            tiempo = tiempo + duration.get("value").getAsInt();
+        }
+
+        ruta.setDistacia(distancia);
+        ruta.setTiempo(tiempo);
+
+        return ruta;
+    }
+
     public boolean existeubicacion (){
         return existeubicacion;
     }

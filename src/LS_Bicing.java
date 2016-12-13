@@ -48,10 +48,10 @@ public class LS_Bicing {
                     lj.stringToUbicacion(sjubi);
                     if (!lj.existeubicacion()){
                         mp.error("L'ubicacio introduida no existeix");
-                    } else {
-                        mp.carregant();
-                        ws.showOnePlace(subi);
+                        break;
                     }
+                    mp.carregant();
+                    ws.showOnePlace(subi);
                     break;
                 case 2:
                     mp.ubicacion();
@@ -60,12 +60,36 @@ public class LS_Bicing {
                     JsonObject joubi2 = lj.stringToUbicacion(sjubi2);
                     if (!lj.existeubicacion()){
                         mp.error("L'ubicació introduida no existeix.");
-                    } else {
-                        mp.carregant();
-                        Ubicacion sitio = new Ubicacion (joubi2);
-                        EstacionBicing estacionMasCercana = sitio.calcularEstacionMasCercana(llbicing);
-                        mp.listarBicing(estacionMasCercana);
+                        break;
                     }
+                    mp.carregant();
+                    Ubicacion sitio = new Ubicacion (joubi2);
+                    EstacionBicing estacionMasCercana = sitio.calcularEstacionMasCercana(llbicing);
+                    mp.listarBicing(estacionMasCercana);
+                    break;
+                case 3:
+                    mp.salida();
+                    String ssalida = sc.nextLine();
+                    mp.llegada();
+                    String sllegada = sc.nextLine();
+
+                    Ruta ruta = new Ruta ();
+
+                    if (!(ruta.iniciarRuta(ssalida, sllegada, llbicing))){
+                        mp.error("Dades Inválides.");
+                        break;
+                    }
+                    String sinforuta = ws.getRuta(ruta);
+                    ruta = lj.infoToRuta(sinforuta, ruta);
+                    mp.infoRuta(ruta);
+                    mp.carregant();
+                    ws.showRute(ruta);
+
+                    break;
+                default:
+                    mp.error("Opció no válida.");
+                    break;
+
             }
         } while (opcion != 9);
 

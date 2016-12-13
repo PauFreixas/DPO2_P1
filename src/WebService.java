@@ -1,9 +1,12 @@
+import com.google.gson.JsonArray;
+
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URL;
+import java.net.URLEncoder;
 
 /**
  * Created by Usuario on 12/12/2016.
@@ -40,11 +43,13 @@ public class WebService {
     }
 
     public String getSiteUrl (String ubicacion){
-        ubicacion = ubicacion.replace(" ","+");
+        try {
+            ubicacion = URLEncoder.encode(ubicacion, "UTF-8");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
         String url = "https://maps.googleapis.com/maps/api/place/textsearch/json?";
         url = url + "query="+ubicacion+"&language=es"+"&key="+ SITESKEY;
-
-        System.out.println(url);
 
         String msg = getInfoFromUrl(url);
 
@@ -52,7 +57,11 @@ public class WebService {
     }
 
     public void showOnePlace (String s) {
-        s = s.replace(" ", "+");
+        try {
+            s = URLEncoder.encode(s, "UTF-8");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
         String link = "http://maps.google.com/?q=" + s;
 
         try {
@@ -61,6 +70,39 @@ public class WebService {
         } catch (Exception e) {
             System.out.println("Error al abrir URL: " + e.getMessage());
         }
+    }
+
+    public String getRuta (Ruta ruta){
+        String url = "https://maps.googleapis.com/maps/api/distancematrix/json?" +
+                "origins=" +ruta.getUsalida().getLatitud() + "," + ruta.getUsalida().getLongitud() + "|" +
+                ruta.getEbsalida().getLatitud() + "," + ruta.getEbsalida().getLongitud() + "|" +
+                ruta.getEbllegada().getLatitud() + "," + ruta.getEbllegada().getLongitud() + "&" +
+                "destinations=" + ruta.getEbsalida().getLatitud() + "," + ruta.getEbsalida().getLongitud() + "|" +
+                ruta.getEbllegada().getLatitud() + "," + ruta.getEbllegada().getLongitud() + "|" +
+                ruta.getUllegada().getLatitud() + "," + ruta.getUllegada().getLongitud() + "&" +
+                "key=" + DISTANCEKEY;
+        String msg = getInfoFromUrl(url);
+        return msg;
+    }
+
+    public void showRute (Ruta ruta){
+        String link = "";
+        try {
+            link = "http://maps.google.com/?" +
+                    "saddr=" + URLEncoder.encode(ruta.getSsalida(), "UTF-8") +
+                    "&daddr=" + URLEncoder.encode(ruta.getEbsalida().getCalle(), "UTF-8") +
+                    "+to:" + URLEncoder.encode(ruta.getEbllegada().getCalle(), "UTF-8") +
+                    "+to:" + URLEncoder.encode(ruta.getSllegada(), "UTF-8") + "&dirflg=b";
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            Desktop dk = Desktop.getDesktop();
+            dk.browse(new URI(link));
+        } catch (Exception e) {
+            System.out.println("Error al abrir URL: " + e.getMessage());
+        }
+
     }
 
     public boolean isFunciona() {

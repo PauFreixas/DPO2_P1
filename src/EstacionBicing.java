@@ -3,7 +3,7 @@ import com.google.gson.JsonObject;
 import java.util.LinkedList;
 
 /**
- * Created by Usuario on 12/12/2016.
+ * Created by  on 12/12/2016.
  */
 public class EstacionBicing extends Ubicacion {
     private int id;
