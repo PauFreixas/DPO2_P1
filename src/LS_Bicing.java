@@ -81,14 +81,10 @@ public class LS_Bicing {
                     }
                     String sinforuta = ws.getRuta(ruta);
                     ruta = lj.infoToRuta(sinforuta, ruta);
+                    ruta.comprobarEBSalida();
                     mp.infoRuta(ruta);
-                    mp.carregant();
                     ws.showRute(ruta);
-
-                    System.out.println("asdf asdf");
-
                     break;
-
                 case 4:
                     mp.minimo();
                     int minimo = Integer.parseInt(sc.nextLine());

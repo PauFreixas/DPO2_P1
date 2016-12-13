@@ -1,5 +1,6 @@
 import com.google.gson.JsonArray;
 
+import javax.print.DocFlavor;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -97,6 +98,7 @@ public class WebService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        mp.carregant();
         try {
             Desktop dk = Desktop.getDesktop();
             dk.browse(new URI(link));
@@ -118,6 +120,8 @@ public class WebService {
         }
 
         url = url + "&key=" + MAPKEY;
+
+        mp.carregant();
 
         try {
             Desktop dk = Desktop.getDesktop();

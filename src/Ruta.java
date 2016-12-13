@@ -42,6 +42,12 @@ public class Ruta {
         return true;
     }
 
+    public void comprobarEBSalida (){
+        while (ebsalida.getBikes() < 1){
+            ebsalida = ebsalida.getEstaciones().get(0);
+        }
+    }
+
     public Ubicacion getUsalida() {
         return usalida;
     }
