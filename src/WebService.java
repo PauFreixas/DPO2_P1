@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.LinkedList;
 
 /**
  * Created by Usuario on 12/12/2016.
@@ -103,6 +104,27 @@ public class WebService {
             System.out.println("Error al abrir URL: " + e.getMessage());
         }
 
+    }
+
+    public void estacionesBicing (LinkedList<EstacionBicing> estaciones){
+        String url = "https://maps.googleapis.com/maps/api/staticmap?size=800x600&markers=color:red";
+
+        for (int i = 0; i < estaciones.size(); i++){
+            try {
+                url = url + URLEncoder.encode("|" + estaciones.get(i).getLatitud()+","+estaciones.get(i).getLongitud(), "UTF-8");
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+
+        url = url + "&key=" + MAPKEY;
+
+        try {
+            Desktop dk = Desktop.getDesktop();
+            dk.browse(new URI(url));
+        } catch (Exception e) {
+            System.out.println("Error al abrir URL: " + e.getMessage());
+        }
     }
 
     public boolean isFunciona() {

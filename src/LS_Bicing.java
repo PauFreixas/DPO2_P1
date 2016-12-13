@@ -88,6 +88,20 @@ public class LS_Bicing {
                     System.out.println("asdf asdf");
 
                     break;
+
+                case 4:
+                    mp.minimo();
+                    int minimo = Integer.parseInt(sc.nextLine());
+                    LinkedList<EstacionBicing> estacionesmostrar = new LinkedList<>();
+
+                    for (int i = 0; i < llbicing.size(); i++){
+                        if (llbicing.get(i).getBikes() > minimo){
+                            estacionesmostrar.add(llbicing.get(i));
+                        }
+                    }
+                    ws.estacionesBicing(estacionesmostrar);
+
+                    break;
                 default:
                     mp.error("Opció no válida.");
                     break;

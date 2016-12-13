@@ -70,4 +70,8 @@ public class MostrarPantalla {
         System.out.println(INTRO);
     }
 
+    public void minimo (){
+        System.out.println("Mínim de bicicletes disponibles:");
+    }
+
 }
