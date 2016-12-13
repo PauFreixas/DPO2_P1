@@ -85,6 +85,8 @@ public class LS_Bicing {
                     mp.carregant();
                     ws.showRute(ruta);
 
+                    System.out.println("asdf asdf");
+
                     break;
                 default:
                     mp.error("Opció no válida.");
