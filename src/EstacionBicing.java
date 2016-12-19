@@ -31,6 +31,7 @@ public class EstacionBicing extends Ubicacion {
             id_estaciones[i] = Integer.parseInt(aux[i]);
         }
     }
+
     public void assignaestacio (LinkedList<EstacionBicing> bicing){
         estaciones = new LinkedList<>();
         for (int i = 0; i < id_estaciones.length; i++){

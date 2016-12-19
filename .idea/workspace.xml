@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf27f3fe-692b-4600-9a56-186f328ddfe6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Practica1_DPO2/WebService.class" afterPath="$PROJECT_DIR$/out/production/Practica1_DPO2/WebService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Site.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Practica1_DPO2/LS_Bicing.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Practica1_DPO2/LecturaJson.class" afterPath="$PROJECT_DIR$/out/production/Practica1_DPO2/LecturaJson.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WebService.java" afterPath="$PROJECT_DIR$/src/WebService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EstacionBicing.java" afterPath="$PROJECT_DIR$/src/EstacionBicing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LS_Bicing.java" afterPath="$PROJECT_DIR$/src/LS_Bicing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LecturaJson.java" afterPath="$PROJECT_DIR$/src/LecturaJson.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MostrarPantalla.java" afterPath="$PROJECT_DIR$/src/MostrarPantalla.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ubicacion.java" afterPath="$PROJECT_DIR$/src/Ubicacion.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,13 +29,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LS_Bicing.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LS_Bicing.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LS_Bicing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="2690">
+              <caret line="142" column="39" lean-forward="false" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Site.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Site.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#Site#1;class#Site#0" expanded="false" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1295#1296#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+                <element signature="e#1370#1371#0" expanded="true" />
+                <element signature="e#1413#1414#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1470#1471#0" expanded="true" />
+                <element signature="e#1503#1504#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,10 +65,9 @@
       <file leaf-file-name="Ruta.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ruta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
+            <state relative-caret-position="-258">
               <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#iniciarRuta#0;class#Ruta#0" expanded="false" />
               </folding>
             </state>
@@ -51,11 +77,11 @@
       <file leaf-file-name="EstacionBicing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EstacionBicing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+                <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -64,14 +90,15 @@
       <file leaf-file-name="MostrarPantalla.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MostrarPantalla.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+            <state relative-caret-position="-22">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
+                <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
                 <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
                 <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
                 <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-                <element signature="e#3052#3053#0" expanded="true" />
-                <element signature="e#3122#3123#0" expanded="true" />
+                <element signature="e#3926#3927#0" expanded="true" />
+                <element signature="e#3996#3997#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,9 +107,10 @@
       <file leaf-file-name="LecturaJson.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LecturaJson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1342">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="883">
+              <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
               </folding>
             </state>
@@ -92,22 +120,21 @@
       <file leaf-file-name="Ubicacion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ubicacion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="-374">
+              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-                <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WebService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-534">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="968">
+              <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
+              <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
               <folding>
                 <element signature="method#getRuta#0;class#WebService#0" expanded="false" />
               </folding>
@@ -135,13 +162,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/Ruta.java" />
+        <option value="$PROJECT_DIR$/src/WebService.java" />
         <option value="$PROJECT_DIR$/src/Ubicacion.java" />
         <option value="$PROJECT_DIR$/src/EstacionBicing.java" />
-        <option value="$PROJECT_DIR$/src/LecturaJson.java" />
         <option value="$PROJECT_DIR$/src/MostrarPantalla.java" />
-        <option value="$PROJECT_DIR$/src/Ruta.java" />
+        <option value="$PROJECT_DIR$/src/LecturaJson.java" />
+        <option value="$PROJECT_DIR$/src/Site.java" />
         <option value="$PROJECT_DIR$/src/LS_Bicing.java" />
-        <option value="$PROJECT_DIR$/src/WebService.java" />
       </list>
     </option>
   </component>
@@ -158,7 +186,7 @@
     <option name="height" value="1098" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -171,44 +199,12 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica1_DPO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica1_DPO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica1_DPO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practica1_DPO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/gson-2.3.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -598,7 +594,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
+      <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -641,11 +637,15 @@
       <workItem from="1481639619089" duration="314000" />
       <workItem from="1481647313591" duration="4439000" />
       <workItem from="1481665933459" duration="8000" />
+      <workItem from="1481737834242" duration="923000" />
+      <workItem from="1481888738558" duration="48000" />
+      <workItem from="1481888859079" duration="81000" />
+      <workItem from="1482158123433" duration="10119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27816000" />
+    <option name="totallyTimeSpent" value="38987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -654,13 +654,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32466182" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32466182" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46826223" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3548387" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -671,13 +672,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -687,7 +687,7 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255578" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32466182" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -704,10 +704,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3548387" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -730,24 +730,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LecturaJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ubicacion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -766,9 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2002">
           <caret line="95" column="21" lean-forward="false" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -777,7 +763,6 @@
         <state relative-caret-position="814">
           <caret line="60" column="28" lean-forward="false" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#iniciarRuta#0;class#Ruta#0" expanded="false" />
           </folding>
         </state>
@@ -788,8 +773,8 @@
         <state relative-caret-position="66">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+            <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,11 +784,12 @@
         <state relative-caret-position="660">
           <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
           <folding>
+            <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -813,6 +799,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
           </folding>
         </state>
@@ -823,9 +810,7 @@
         <state relative-caret-position="176">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -844,9 +829,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2134">
           <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +838,6 @@
         <state relative-caret-position="814">
           <caret line="60" column="28" lean-forward="false" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#iniciarRuta#0;class#Ruta#0" expanded="false" />
           </folding>
         </state>
@@ -866,8 +848,8 @@
         <state relative-caret-position="66">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+            <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -877,11 +859,12 @@
         <state relative-caret-position="660">
           <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
           <folding>
+            <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -891,6 +874,7 @@
         <state relative-caret-position="1034">
           <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
           </folding>
         </state>
@@ -901,9 +885,7 @@
         <state relative-caret-position="176">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -922,9 +904,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -933,7 +913,6 @@
         <state relative-caret-position="814">
           <caret line="60" column="28" lean-forward="false" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#iniciarRuta#0;class#Ruta#0" expanded="false" />
           </folding>
         </state>
@@ -944,8 +923,8 @@
         <state relative-caret-position="66">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+            <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -955,11 +934,12 @@
         <state relative-caret-position="132">
           <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding>
+            <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -969,6 +949,7 @@
         <state relative-caret-position="1078">
           <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
           </folding>
         </state>
@@ -979,9 +960,7 @@
         <state relative-caret-position="176">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1000,9 +979,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,7 +988,6 @@
         <state relative-caret-position="814">
           <caret line="60" column="28" lean-forward="false" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#iniciarRuta#0;class#Ruta#0" expanded="false" />
           </folding>
         </state>
@@ -1022,8 +998,8 @@
         <state relative-caret-position="66">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+            <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1033,11 +1009,12 @@
         <state relative-caret-position="132">
           <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding>
+            <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1047,6 +1024,7 @@
         <state relative-caret-position="396">
           <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
           </folding>
         </state>
@@ -1057,9 +1035,7 @@
         <state relative-caret-position="176">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1078,9 +1054,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
           <caret line="85" column="20" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1089,7 +1063,6 @@
         <state relative-caret-position="629">
           <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#iniciarRuta#0;class#Ruta#0" expanded="false" />
           </folding>
         </state>
@@ -1100,8 +1073,8 @@
         <state relative-caret-position="51">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+            <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1111,11 +1084,12 @@
         <state relative-caret-position="102">
           <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding>
+            <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1125,6 +1099,7 @@
         <state relative-caret-position="646">
           <caret line="61" column="18" lean-forward="false" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
           </folding>
         </state>
@@ -1135,9 +1110,7 @@
         <state relative-caret-position="136">
           <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1156,9 +1129,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1167,8 +1138,8 @@
         <state relative-caret-position="731">
           <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+            <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1178,11 +1149,12 @@
         <state relative-caret-position="476">
           <caret line="47" column="86" lean-forward="true" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
           <folding>
+            <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
             <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1192,6 +1164,7 @@
         <state relative-caret-position="595">
           <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
           </folding>
         </state>
@@ -1202,9 +1175,7 @@
         <state relative-caret-position="867">
           <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1219,36 +1190,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LecturaJson.java">
+    <entry file="file://$PROJECT_DIR$/src/Ubicacion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1342">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="-374">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
-            <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MostrarPantalla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-          <folding>
-            <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
-            <element signature="e#3052#3053#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
+            <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ruta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
+        <state relative-caret-position="-258">
           <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#iniciarRuta#0;class#Ruta#0" expanded="false" />
           </folding>
         </state>
@@ -1256,44 +1212,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EstacionBicing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#EstacionBicing#1;class#EstacionBicing#0" expanded="false" />
+            <element signature="method#assignaestacio#0;class#EstacionBicing#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ubicacion.java">
+    <entry file="file://$PROJECT_DIR$/src/LecturaJson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="883">
+          <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Ubicacion#1;class#Ubicacion#0" expanded="false" />
-            <element signature="method#Ubicacion#2;class#Ubicacion#0" expanded="false" />
+            <element signature="method#stringToBicing#0;class#LecturaJson#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LS_Bicing.java">
+    <entry file="file://$PROJECT_DIR$/src/Site.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#Site#1;class#Site#0" expanded="false" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-534">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="968">
+          <caret line="116" column="52" lean-forward="true" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
+          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
             <element signature="method#getRuta#0;class#WebService#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MostrarPantalla.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="method#mostrarSite#0;class#MostrarPantalla#0" expanded="false" />
+            <element signature="method#imprimirMenu#0;class#MostrarPantalla#0" expanded="false" />
+            <element signature="method#listarBicing#0;class#MostrarPantalla#0" expanded="false" />
+            <element signature="method#infoRuta#0;class#MostrarPantalla#0" expanded="false" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LS_Bicing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2690">
+          <caret line="142" column="39" lean-forward="false" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

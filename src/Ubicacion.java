@@ -12,6 +12,7 @@ public class Ubicacion {
     private float altitud;
     private String calle;
 
+
     public Ubicacion (){}
 
     public Ubicacion (float latitud, float longitud, float altitud, String calle, String num){
@@ -62,4 +63,6 @@ public class Ubicacion {
     public float getLongitud() {
         return longitud;
     }
+
+
 }

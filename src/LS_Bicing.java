@@ -1,6 +1,7 @@
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ import java.util.Scanner;
 
 public class LS_Bicing {
     private final static String URLBICING = "http://wservice.viabicing.cat/v2/stations";
+    private final static String FAVORITOS = "favorite_places.json";
 
     public static void main (String[] args){
         MostrarPantalla mp = new MostrarPantalla();
@@ -38,7 +40,11 @@ public class LS_Bicing {
         do {
             mp.imprimirMenu();
             mp.opcion();
-            opcion = sc.nextInt();
+            try {
+                opcion = sc.nextInt();
+            } catch (InputMismatchException e){
+                opcion = 0;
+            }
             sc.nextLine();
             switch (opcion){
                 case 1:
@@ -96,7 +102,53 @@ public class LS_Bicing {
                         }
                     }
                     ws.estacionesBicing(estacionesmostrar);
-
+                    break;
+                case 5:
+                    mp.ubicacion();
+                    String subi5 = sc.nextLine();
+                    String sjubi5 = ws.getSiteUrl(subi5);
+                    JsonArray jasites = lj.stringToSites(sjubi5);
+                    if (!lj.existeubicacion()){
+                        mp.error("L'ubicacio introduida no existeix");
+                        break;
+                    }
+                    LinkedList<Site> llsites= new LinkedList<>();
+                    for (int i = 0; i < jasites.size(); i++){
+                        llsites.add(new Site ((JsonObject)jasites.get(i)));
+                    }
+                    mp.infoSites(llsites);
+                    for (int i = 0; i < llsites.size(); i++){
+                        mp.mostrarSite(llsites.get(i));
+                        boolean aux = true;
+                        while (aux) {
+                            mp.guardaFavorits();
+                            String guardar = (sc.nextLine()).toLowerCase();
+                            if (guardar.equals("si")) {
+                                llsites.get(i).escribirFavoritos(llsites.get(i).toJson(), FAVORITOS);
+                                aux = false;
+                            } else if (guardar.equals("no")) {
+                                aux = false;
+                            } else {
+                                mp.error("Valor no válido.");
+                            }
+                        }
+                    }
+                    break;
+                case 6:
+                    JsonArray favs = lj.leerFavoritos(FAVORITOS);
+                    llsites = new LinkedList<>();
+                    for (int i = 0; i < favs.size(); i++){
+                        llsites.add(new Site ((JsonObject)favs.get(i)));
+                    }
+                    mp.mostrarFavoritos(llsites);
+                    int sitio = 0;
+                    try {
+                        sitio = sc.nextInt();
+                        JsonObject aux = favs.get(sitio).getAsJsonObject();
+                        ws.showOnePlace(aux.get("address").getAsString());
+                    } catch (InputMismatchException e) {
+                        System.out.println("Error al introduir les dades.");
+                    }
                     break;
                 default:
                     mp.error("Opció no válida.");

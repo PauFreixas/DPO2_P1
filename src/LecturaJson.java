@@ -2,6 +2,11 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Created by Usuario on 12/12/2016.
  */
@@ -35,6 +40,52 @@ public class LecturaJson {
         }
         return joubi;
 
+    }
+    public JsonArray stringToSites (String info){
+        existeubicacion = true;
+
+        JsonParser parser = new JsonParser();
+        JsonObject obj = (JsonObject) parser.parse(info);
+        JsonArray jarray = (JsonArray) obj.get("results");
+        JsonArray joubi = new JsonArray();
+        if (!("OK".equals(obj.get("status").getAsString()))){
+            existeubicacion = false;
+        } else {
+            joubi = jarray;
+        }
+        return joubi;
+
+    }
+
+    public void escribirFavoritos (JsonObject obj, String archivo){
+        try {
+            FileWriter fw = new FileWriter (archivo);
+            fw.write(obj.toString());
+            fw.flush();
+            fw.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public JsonArray leerFavoritos (String archivo){
+        JsonArray ja = new JsonArray();
+        String sja = new String();
+        try {
+            FileReader fr = new FileReader (archivo);
+            BufferedReader br = new BufferedReader (fr);
+            String linea;
+            while ((linea = br.readLine()) != null){
+                sja = sja + linea;
+            }
+            br.close();
+            fr.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        JsonParser parser = new JsonParser ();
+        JsonArray sites = (JsonArray) parser.parse(sja);
+        return sites;
     }
 
     public Ruta infoToRuta (String info, Ruta ruta){

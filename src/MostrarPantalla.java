@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 /**
  * Created by Javier Ortiz on 12/12/2016.
  */
@@ -8,6 +10,29 @@ public class MostrarPantalla {
 
     public void okBicing (){
         System.out.println("Dades carregades correctament. Benvingut al LSBicing"+ INTRO + INTRO);
+    }
+
+    public void infoSites (LinkedList<Site> llsites){
+        System.out.println("S'han trobat " + llsites.size() + " resultats:" + INTRO);
+    }
+
+    public void mostrarSite (Site s) {
+        System.out.println("Lloc: " + s.getName());
+        System.out.println("---------------------------------------------");
+        System.out.println("Adreça: " + s.getCalle());
+        if (s.isOpen()){
+            System.out.println("Actualmente obert.");
+        } else if (s.isNotOpen()){
+            System.out.println("Actualment tancat.");
+        } else {
+            System.out.println(s.getOpen());
+        }
+        System.out.println("Rating del lloc: " + s.getRating());
+        System.out.println();
+    }
+
+    public void guardaFavorits (){
+        System.out.println("Vols guardar-lo en el fitxer favorite_places.json? (Si/No)");
     }
 
     public void imprimirMenu(){
