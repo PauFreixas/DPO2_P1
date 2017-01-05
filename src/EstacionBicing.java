@@ -13,6 +13,7 @@ public class EstacionBicing extends Ubicacion {
     private int[] id_estaciones;
     private LinkedList<EstacionBicing> estaciones;
     private String estacionescercanas;
+    private int legana;
 
     public EstacionBicing () {}
 
@@ -44,6 +45,24 @@ public class EstacionBicing extends Ubicacion {
         }
     }
 
+    public float masLegana (LinkedList<EstacionBicing> llbicing){
+        int tam = llbicing.size();
+        EstacionBicing aux = llbicing.get(0);
+
+        float mayordistancia = 0;
+        legana = 0;
+
+        for (int i = 0; i < tam; i++) {
+            aux = llbicing.get(i);
+            float distancia = (float) Math.sqrt((Math.pow(this.getLatitud() - aux.getLatitud(), 2.0) + Math.pow (this.getLongitud() - aux.getLongitud(), 2.0)));
+            if (distancia > mayordistancia) {
+                mayordistancia = distancia;
+                legana = i;
+            }
+        }
+        return mayordistancia;
+    }
+
     public LinkedList<EstacionBicing> getEstaciones() {
         return estaciones;
     }
@@ -63,4 +82,6 @@ public class EstacionBicing extends Ubicacion {
     public int getId (){
         return id;
     }
+
+    public int getLegana () {return legana;}
 }

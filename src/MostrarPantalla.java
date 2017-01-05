@@ -1,3 +1,5 @@
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 /**
@@ -8,12 +10,19 @@ public class MostrarPantalla {
 
     public MostrarPantalla(){}
 
+    public void sitios (LinkedList<Site> sitios){
+        System.out.println("----- LLOC PREFERITS -----");
+        for (int i = 0; i < sitios.size(); i++){
+            System.out.println((i+1) + ". " + sitios.get(i).getName() + " - " + sitios.get(i).getCalle());
+        }
+    }
+
     public void okBicing (){
         System.out.println("Dades carregades correctament. Benvingut al LSBicing"+ INTRO + INTRO);
     }
 
     public void infoSites (LinkedList<Site> llsites){
-        System.out.println("S'han trobat " + llsites.size() + " resultats:" + INTRO);
+        System.out.println("S'han trobat " + llsites.size() + " resultats." + INTRO);
     }
 
     public void mostrarSite (Site s) {
@@ -36,7 +45,7 @@ public class MostrarPantalla {
     }
 
     public void imprimirMenu(){
-        System.out.println("************* LSBicing menu *************");
+        System.out.println(INTRO+INTRO+"************* LSBicing menu *************");
         System.out.println("1.Geolocalització");
         System.out.println("2.Buscar estació de Bicing més propera");
         System.out.println("3.Creació d'una ruta");
@@ -99,4 +108,53 @@ public class MostrarPantalla {
         System.out.println("Mínim de bicicletes disponibles:");
     }
 
+    public void resultadostoShow (){
+        System.out.println("Cuantos resultados quieres mostrar?");
+    }
+
+    public void mayorDistacian (EstacionBicing salida, EstacionBicing llegada){
+        System.out.println("Las estaciones mas leganas entre si son " + salida.getCalle() + " y " + llegada.getCalle() + ".");
+    }
+
+    public void adios (){
+        System.out.println("Gracias por utilizarnos.");
+        System.out.println("LSBICING by Javier Ortiz & Pau Freixes");
+    }
+
+    public void info (Ruta ruta, LinkedList<Ubicacion> llubi){
+        Collections.sort(llubi, new Comparator<Ubicacion>() {
+            @Override
+            public int compare(Ubicacion u1, Ubicacion u2) {
+                return u2.getCont() - u1.getCont();
+            }
+        });
+
+        System.out.println("------ Lugares más visitados ------");
+        if (llubi.size() == 0){
+            error("No se han introducido ningún lugar.");
+        } else if (llubi.size() > 10){
+            for (int i = 0; i < 10; i++){
+                System.out.println("Nombre: " + llubi.get(i).getCalle());
+                System.out.println("Latitud: " + llubi.get(i).getLatitud());
+                System.out.println("Longitud: " + llubi.get(i).getLongitud());
+            }
+        } else {
+            for (int i = 0; i < llubi.size(); i++){
+                System.out.println("Nombre: " + llubi.get(i).getCalle());
+                System.out.println("Latitud: " + llubi.get(i).getLatitud());
+                System.out.println("Longitud: " + llubi.get(i).getLongitud());
+            }
+        }
+
+        System.out.println("------ Ruta más Larga ------");
+        if (ruta.getSllegada() == null){
+            error("No se ha introducido ninguna ruta.");
+        } else {
+            System.out.println("-- Origen: " + ruta.getSsalida());
+            System.out.println("-- Destí: " + ruta.getSllegada());
+            System.out.println("-- Distància: " + ruta.getDistacia() + " m");
+            System.out.println("-- Duració: " + ruta.getTiempo() / 60 + ":" + ruta.getTiempo() % 60);
+        }
+
+    }
 }

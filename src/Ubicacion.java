@@ -11,6 +11,7 @@ public class Ubicacion {
     private float longitud;
     private float altitud;
     private String calle;
+    private int cont;
 
 
     public Ubicacion (){}
@@ -20,6 +21,7 @@ public class Ubicacion {
         this.longitud = longitud;
         this.altitud = altitud;
         this.calle = calle + ", " + num;
+        this.cont = 0;
     }
 
     public Ubicacion (JsonObject ubicacion) {
@@ -29,6 +31,7 @@ public class Ubicacion {
         JsonObject location = aux.get("location").getAsJsonObject();
         this.latitud = location.get("lat").getAsFloat();
         this.longitud = location.get("lng").getAsFloat();
+        this.cont = 0;
     }
 
     public EstacionBicing calcularEstacionMasCercana (LinkedList<EstacionBicing> llbicing) {
@@ -52,8 +55,16 @@ public class Ubicacion {
         return llbicing.get(posicionmenordist);
     }
 
+    public void sumCont (){
+        cont = cont + 1;
+    }
+
     public String getCalle() {
         return calle;
+    }
+
+    public void setCalle(String calle) {
+        this.calle = calle;
     }
 
     public float getLatitud() {
@@ -62,6 +73,10 @@ public class Ubicacion {
 
     public float getLongitud() {
         return longitud;
+    }
+
+    public int getCont() {
+        return cont;
     }
 
 

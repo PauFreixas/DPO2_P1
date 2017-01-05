@@ -15,7 +15,6 @@ public class Site extends Ubicacion {
     private String name;
     private String open;
     private String rating;
-    private boolean fav;
 
     public Site (){};
 
@@ -35,18 +34,12 @@ public class Site extends Ubicacion {
             open = "Informació no donada.";
         }
 
-        fav = false;
     }
 
-    public JsonObject toJson (){
-        JsonObject site = new JsonObject();
-
-        site.addProperty("address", super.getCalle());
-        site.addProperty("name", getName());
-
-        return site;
+    public Site (String nombre, String calle){
+        name = nombre;
+        super.setCalle(calle);
     }
-
 
     public String getName() {
         return name;
@@ -67,7 +60,5 @@ public class Site extends Ubicacion {
     public String getRating() {
         return rating;
     }
-
-    public void setFav (boolean fav){this.fav = fav;}
 
 }

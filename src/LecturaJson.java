@@ -1,4 +1,5 @@
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -41,6 +42,7 @@ public class LecturaJson {
         return joubi;
 
     }
+
     public JsonArray stringToSites (String info){
         existeubicacion = true;
 
@@ -84,7 +86,8 @@ public class LecturaJson {
             e.printStackTrace();
         }
         JsonParser parser = new JsonParser ();
-        JsonArray sites = (JsonArray) parser.parse(sja);
+        JsonElement aux = parser.parse(sja);
+        JsonArray sites = new JsonArray();
         return sites;
     }
 

@@ -17,6 +17,10 @@ public class Ruta {
 
     public Ruta (){}
 
+    public Ruta (int i){
+        distacia = i;
+    }
+
     public boolean iniciarRuta (String ssalida, String sllegada, LinkedList<EstacionBicing> llestacion){
         LecturaJson lj = new LecturaJson();
         WebService ws = new WebService();

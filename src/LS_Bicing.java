@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 
 public class LS_Bicing {
-    private final static String URLBICING = "http://wservice.viabicing.cat/v2/stations";
     private final static String FAVORITOS = "favorite_places.json";
+    private final static String BINCING = "http://wservice.viabicing.cat/v2/stations";
 
     public static void main (String[] args){
         MostrarPantalla mp = new MostrarPantalla();
@@ -20,8 +20,11 @@ public class LS_Bicing {
         LecturaJson lj = new LecturaJson();
         LinkedList<EstacionBicing>  llbicing = new LinkedList<>();
         Scanner sc = new Scanner(System.in);
+        Favoritos fav = new Favoritos(FAVORITOS);
+        LinkedList<Ubicacion> usados = new LinkedList<>();
+        Ruta maslarga = new Ruta (0);
 
-        String sbicing = ws.getInfoFromUrl(URLBICING);
+        String sbicing = ws.getInfoFromUrl(BINCING);
         if (!ws.isFunciona()){
             return;
         }
@@ -51,13 +54,24 @@ public class LS_Bicing {
                     mp.ubicacion();
                     String subi = sc.nextLine();
                     String sjubi = ws.getSiteUrl(subi);
-                    lj.stringToUbicacion(sjubi);
+                    Ubicacion ubi = new Ubicacion (lj.stringToUbicacion(sjubi));
                     if (!lj.existeubicacion()){
                         mp.error("L'ubicacio introduida no existeix");
                         break;
                     }
                     mp.carregant();
                     ws.showOnePlace(subi);
+
+                    boolean u1 = false;
+                    for (int i = 0; i < usados.size(); i++){
+                        if (usados.get(i).getCalle().equals(ubi.getCalle())){
+                            usados.get(i).sumCont();
+                            u1 = true;
+                        }
+                    }
+                    if (!u1){
+                        usados.add(ubi);
+                    }
                     break;
                 case 2:
                     mp.ubicacion();
@@ -72,6 +86,17 @@ public class LS_Bicing {
                     Ubicacion sitio = new Ubicacion (joubi2);
                     EstacionBicing estacionMasCercana = sitio.calcularEstacionMasCercana(llbicing);
                     mp.listarBicing(estacionMasCercana);
+
+                    boolean u2 = false;
+                    for (int i = 0; i < usados.size(); i++){
+                        if (usados.get(i).getCalle().equals(sitio.getCalle())){
+                            usados.get(i).sumCont();
+                            u2 = true;
+                        }
+                    }
+                    if (!u2){
+                        usados.add(sitio);
+                    }
                     break;
                 case 3:
                     mp.salida();
@@ -90,6 +115,28 @@ public class LS_Bicing {
                     ruta.comprobarEBSalida();
                     mp.infoRuta(ruta);
                     ws.showRute(ruta);
+                    boolean u3 = false;
+                    for (int i = 0; i < usados.size(); i++){
+                        if (usados.get(i).getCalle().equals(ruta.getUllegada().getCalle())){
+                            usados.get(i).sumCont();
+                            u3 = true;
+                        }
+                    }
+                    if (!u3){
+                        usados.add(ruta.getUllegada());
+                    }
+                    for (int i = 0; i < usados.size(); i++){
+                        if (usados.get(i).getCalle().equals(ruta.getUsalida().getCalle())){
+                            usados.get(i).sumCont();
+                            u3 = true;
+                        }
+                    }
+                    if (!u3){
+                        usados.add(ruta.getUsalida());
+                    }
+                    if (ruta.getDistacia() > maslarga.getDistacia()){
+                        maslarga = ruta;
+                    }
                     break;
                 case 4:
                     mp.minimo();
@@ -117,14 +164,17 @@ public class LS_Bicing {
                         llsites.add(new Site ((JsonObject)jasites.get(i)));
                     }
                     mp.infoSites(llsites);
-                    for (int i = 0; i < llsites.size(); i++){
+                    mp.resultadostoShow();
+                    int resultados = sc.nextInt();
+                    sc.nextLine();
+                    for (int i = 0; i < resultados; i++){
                         mp.mostrarSite(llsites.get(i));
                         boolean aux = true;
                         while (aux) {
                             mp.guardaFavorits();
                             String guardar = (sc.nextLine()).toLowerCase();
                             if (guardar.equals("si")) {
-                                llsites.get(i).escribirFavoritos(llsites.get(i).toJson(), FAVORITOS);
+                                fav.addFavoritos(llsites.get(i));
                                 aux = false;
                             } else if (guardar.equals("no")) {
                                 aux = false;
@@ -133,22 +183,29 @@ public class LS_Bicing {
                             }
                         }
                     }
+                    fav.saveFavoritos(FAVORITOS);
                     break;
                 case 6:
-                    JsonArray favs = lj.leerFavoritos(FAVORITOS);
-                    llsites = new LinkedList<>();
-                    for (int i = 0; i < favs.size(); i++){
-                        llsites.add(new Site ((JsonObject)favs.get(i)));
+                    mp.sitios(fav.getFavoritos());
+                    break;
+                case 7:
+                    EstacionBicing salida = new EstacionBicing(), llegada = new EstacionBicing();
+                    float mdistancia = 0;
+                    for (int i = 0; i < llbicing.size(); i++){
+                        if (llbicing.get(i).masLegana(llbicing) > mdistancia){
+                            mdistancia = llbicing.get(i).masLegana(llbicing);
+                            salida = llbicing.get(i);
+                            llegada = llbicing.get(salida.getLegana());
+                        }
                     }
-                    mp.mostrarFavoritos(llsites);
-                    int sitio = 0;
-                    try {
-                        sitio = sc.nextInt();
-                        JsonObject aux = favs.get(sitio).getAsJsonObject();
-                        ws.showOnePlace(aux.get("address").getAsString());
-                    } catch (InputMismatchException e) {
-                        System.out.println("Error al introduir les dades.");
-                    }
+                    mp.mayorDistacian(salida, llegada);
+                    break;
+                case 8:
+                    mp.info(maslarga, usados);
+                    break;
+                case 9:
+                    fav.saveFavoritos(FAVORITOS);
+                    mp.adios();
                     break;
                 default:
                     mp.error("Opció no válida.");
